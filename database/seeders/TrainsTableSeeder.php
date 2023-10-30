@@ -39,7 +39,7 @@ class TrainsTableSeeder extends Seeder
         ];
 
         foreach ($trains as $train){
-            $newTrain = new $train();
+            $newTrain = new Train();
             $newTrain->company = $train['company'];
             $newTrain->station_start = $train['station_start'];
             $newTrain->station_end = $train['station_end'];

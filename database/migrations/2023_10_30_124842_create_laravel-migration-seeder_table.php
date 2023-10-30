@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('station_end');
             $table->decimal('times_start',10, 2);
             $table->decimal('times_end',10, 2);
-            $table->smallInteger('train_code');
-            $table->smallInteger('vagon_number');
+            $table->string('train_code');
+            $table->string('vagon_number');
             $table->boolean('is_in_time')->default(1);
             $table->boolean('cancelled')->default(0);
             $table->timestamps();

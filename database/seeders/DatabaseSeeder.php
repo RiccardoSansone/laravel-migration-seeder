@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Database\TrainsTableSeeder;
+use Database\Seeders\TrainsTableSeeder as SeedersTrainsTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +20,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call([
+            SeedersTrainsTableSeeder::class
+        ]);
     }
 }

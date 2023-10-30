@@ -11,7 +11,8 @@ class PageController extends Controller
     //
 
     public function index(){
-        $latest_trains = Train::orderByDesc('id')->get();
+        // $latest_trains = Train::orderByDesc('id')->get();
+        $latest_trains = Train::where('times_start', '>=', 15.00)->get();
 
         return view('welcome', compact('latest_trains'));
     }
